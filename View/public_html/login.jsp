@@ -7,15 +7,11 @@
         <link type="text/css" rel="stylesheet" href="resources/css/jdeveloper.css"/>
     </head>
     <body>
-        <p>
+
             <h2>ACME Corporation: HR Application</h2>
-        </p>
-        <p>
+
             <h3>Application Login</h3>
-        </p>
-        <p>
-            &nbsp;
-        </p>
+
         <form action="login_action.jsp">
             <table>
                 <tr>

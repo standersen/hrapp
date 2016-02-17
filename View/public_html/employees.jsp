@@ -10,7 +10,7 @@
         <%@ page import="hrapp.DataHandler"%>
          
         <h2>
-            <p>ACME Co: HR Application</p>
+            ACME Co: HR Application
         </h2>
          
         <h3>Employee Data</h3>
