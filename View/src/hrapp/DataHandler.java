@@ -28,6 +28,27 @@ public class DataHandler implements Serializable  {
     String userid = "hr";
     String password = "hr";
 
+    public String addEmployee(String first_name,
+    String last_name, String email,
+    String phone_number, String job_id, int salary) throws SQLException {
+        getDBConnection();
+        stmt =
+        conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
+        ResultSet.CONCUR_READ_ONLY);
+        sqlString =
+        "INSERT INTO Employees VALUES (EMPLOYEES_SEQ.nextval, '" +
+        first_name + "','" +
+        last_name + "','" +
+        email + "','" +
+        phone_number + "'," +
+        "SYSDATE, '" +
+        job_id + "', " +
+        salary + ",.30,100,80)";
+        System.out.println("\nInserting: " + sqlString);
+        stmt.execute(sqlString);
+        return "success";
+    }
+    
     public Employee findEmployeeById(int id) throws SQLException {
         Employee selectedEmp = new Employee();
         getDBConnection();

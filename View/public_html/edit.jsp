@@ -7,64 +7,56 @@
     </head>
     <body>
         <p>
-            <h2>ACME Co: HR Application</h2>
+            <H2>ACME Co: HR Application</H2>
         </p>
         <p>
             <h3>Edit Employee Record</h3>
         </p>
         <jsp:useBean id="empsbean" class="hrapp.DataHandler" scope="session"/>
-        <jsp:useBean id="employee" class="hrapp.Employee"/> 
-
+         
+        <jsp:useBean id="employee" class="hrapp.Employee"/>
+         
         <%Integer employee_id = new Integer(request.getParameter("empid"));
 employee = empsbean.findEmployeeById(employee_id.intValue());
 %>
+         
         <form action="update_action.jsp">
-            <table>
+            <table width="412">
                 <tr>
-                    <th>
-                        First Name
-                    </th>
+                    <th>First Name</th>
                     <td>
                         <input type="hidden" name="employee_id" value="&lt;%= employee.getEmployeeId()%>"/>
-                        <input type="text"   name="first_name"  value="&lt;%= employee.getFirstName()%>"/>
+                         
+                        <input type="text" name="first_name" value="&lt;%= employee.getFirstName()%>"/>
                     </td>
                 </tr><tr>
-                    <th>
-                        Last Name
-                    </th>
+                    <th>Last Name</th>
                     <td>
                         <input type="text" name="lastname" value="&lt;%= employee.getLastName()%>"/>
                     </td>
                 </tr><tr>
-                    <th>
-                        Email
-                    </th>
-                    <td>                       
-                    <input type="text" name="email" value="&lt;%= employee.getEmail()%>"/>
-</td>
-                </tr><tr>
-                    <th>
-                        Phone
-                    </th>
-                    <td>                        <input type="text" name="phone_number" value="&lt;%= employee.getPhoneNumber()%>"/>
-</td>
-                </tr><tr>
-                    <th>
-                        Job
-                    </th>   
-                    <td>                        <input type="text" name="job_id" value="&lt;%= employee.getJobId()%>"/>
-</td>
-                </tr><tr>
-                    <th>
-                        Monthly Salary
-                    </th>
+                    <th>Email</th>
                     <td>
-                           <input type="text" name="salary" value="&lt;%= employee.getSalary()%>"/>
+                        <input type="text" name="email" value="&lt;%= employee.getEmail()%>"/>
+                    </td>
+                </tr><tr>
+                    <th>Phone</th>
+                    <td>
+                        <input type="text" name="phone_number" value="&lt;%= employee.getPhoneNumber()%>"/>
+                    </td>
+                </tr><tr>
+                    <th>Job</th>
+                    <td>
+                        <input type="text" name="job_id" value="&lt;%= employee.getJobId()%>"/>
+                    </td>
+                </tr><tr>
+                    <th>Monthly Salary</th>
+                    <td>
+                        <input type="text" name="salary" value="&lt;%= employee.getSalary()%>"/>
                     </td>
                 </tr>
             </table>
             <input type="submit" value="Update"/>
         </form>
-    
     </body>
 </html>

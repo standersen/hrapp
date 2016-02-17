@@ -35,7 +35,9 @@ else
                     <td><h4>Job</h4></td>
                     <td><h4>Phone</h4></td>
                     <td><h4>Salary</h4></td>
-                    <td><h4>Edit</h4></td>
+                    <td>
+                        <a href="insert.jsp">New Employee</a>
+                    </td>
                 </tr>
             <%while (rset.next ())
 {
