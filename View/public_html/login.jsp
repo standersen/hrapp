@@ -8,7 +8,11 @@
     </head>
     <body>
 
-            <h2>ACME Co: HR Application</h2>
+            <h2>
+             &nbsp;
+            <img height="40" width="270" src="Crayon.jpg"/>
+            &nbsp;&nbsp;DEMO : HR Application
+        </h2>
 
             <h3>Application Login</h3><%String loginerrormsg = null;
 loginerrormsg = (String) session.getAttribute("loginerrormsg");
@@ -36,5 +40,8 @@ if (loginerrormsg != null) {%><%=loginerrormsg%>
             </table>
             <input type="submit" value="Submit"/>
         </form>
-     </body>
+        <p>
+            &nbsp;
+        </p>
+    </body>
 </html>
