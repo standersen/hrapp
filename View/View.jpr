@@ -471,7 +471,7 @@
             <value n="name" v="Default"/>
             <value n="runActiveFile" v="false"/>
             <url n="runDirectoryURL" path="."/>
-            <url n="targetURL" path="public_html/login.jsp"/>
+            <url n="targetURL" path="public_html/index.jsp"/>
          </hash>
       </hash>
       <list n="runConfigurationList">
