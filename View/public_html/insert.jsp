@@ -7,9 +7,7 @@
     </head>
     <body>
 
-        <h2>
-            ACME Co: HR Application
-        </h2>
+             <h2>ACME Co: HR Application</h2>
 
             <h3>Insert Employee Record</h3>
 

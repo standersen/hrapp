@@ -9,10 +9,8 @@
     <body>
         <%@ page import="hrapp.DataHandler"%>
          
-        <h2>
-            ACME Co: HR Application
-        </h2>
-         
+            <h2>ACME Co: HR Application</h2>
+        
         <h3>Employee Data</h3>
             <form action="employees.jsp">
             <jsp:useBean id="empsbean" class="hrapp.DataHandler" scope="session"/>

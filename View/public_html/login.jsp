@@ -8,11 +8,14 @@
     </head>
     <body>
 
-            <h2>ACME Corporation: HR Application</h2>
+            <h2>ACME Co: HR Application</h2>
 
-            <h3>Application Login</h3>
-
-        <form action="login_action.jsp">
+            <h3>Application Login</h3><%String loginerrormsg = null;
+loginerrormsg = (String) session.getAttribute("loginerrormsg");
+if (loginerrormsg != null) {%><%=loginerrormsg%>
+        
+<%}%>
+         <form action="login_action.jsp">
             <table>
                 <tr>
                     <td>User ID:</td>
@@ -33,11 +36,5 @@
             </table>
             <input type="submit" value="Submit"/>
         </form>
-        <p>
-            &nbsp;
-        </p>
-        <p>
-            &nbsp;
-        </p>
-    </body>
+     </body>
 </html>
