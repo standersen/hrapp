@@ -49,6 +49,15 @@ public class DataHandler implements Serializable  {
         return "success";
     }
     
+    public String deleteEmployeeById(int id) throws SQLException {
+        getDBConnection();
+        stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
+        ResultSet.CONCUR_READ_ONLY);
+        sqlString = "DELETE FROM Employees WHERE employee_id = " + id;
+        System.out.println("\nExecuting: " + sqlString);
+        stmt.execute(sqlString);
+        return "success";
+    }
     public Employee findEmployeeById(int id) throws SQLException {
         Employee selectedEmp = new Employee();
         getDBConnection();

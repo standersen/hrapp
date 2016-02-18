@@ -50,7 +50,8 @@ rset.getString("job_id") + "</td><td>" +
 rset.getString("phone_number") + "</td><td>" +
 rset.getDouble("salary") +
 "</td><td> <a href=\"edit.jsp?empid=" + rset.getInt(1) +
-"\">Edit</a></td>");
+"\">Edit</a> <a href=\"delete_action.jsp?empid=" +
+rset.getInt(1) + "\">Delete</a></td>");
 out.println("</tr>");
 }%>
             </table></form>
