@@ -12,8 +12,13 @@ String email = request.getParameter("email");
 String phone_number = request.getParameter("phone_number");
 String job_id = request.getParameter("job_id");
 Integer salary = new Integer(request.getParameter("salary"));
-empsbean.addEmployee(first_name, last_name, email, phone_number, job_id,
-salary.intValue());%>
+String useSPFlag = request.getParameter("useSP");
+if ( useSPFlag.equalsIgnoreCase("true"))
+    empsbean.addEmployeeSP(first_name, last_name, email, phone_number, job_id, salary.intValue());
+// otherwise use pure JDBC insert
+else
+    empsbean.addEmployee(first_name, last_name, email, phone_number, job_id, salary.intValue());
+%>
     <body>
         <jsp:forward page="employees.jsp"/>
     </body>

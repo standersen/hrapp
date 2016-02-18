@@ -13,6 +13,8 @@ import oracle.jdbc.pool.OracleDataSource;
 
 import java.io.Serializable;
 
+import java.sql.CallableStatement;
+
 import java.text.StringCharacterIterator;
 
 public class DataHandler implements Serializable {
@@ -30,6 +32,31 @@ public class DataHandler implements Serializable {
     String userid = "hr";
     String password = "hr";
 
+    public String addEmployeeSP(String first_name, String last_name,
+    String email, String phone_number, String job_id,
+    int salary) throws SQLException {
+    try {
+    getDBConnection();
+    sqlString = "begin hr.insert_employee(?,?,?,?,?,?); end;";
+    CallableStatement callstmt = conn.prepareCall(sqlString);
+    callstmt.setString(1, first_name);
+    callstmt.setString(2, last_name);
+    callstmt.setString(3, email);
+    callstmt.setString(4, phone_number);
+    callstmt.setString(5, job_id);
+    callstmt.setInt(6, salary);
+    System.out.println("\nInserting with stored procedure: " +
+    sqlString);
+    callstmt.execute();
+    return "success";
+    }
+    catch ( SQLException ex ) {
+    System.out.println("Possible source of error: Make sure you have created the stored procedure");
+    logException( ex );
+    return "failure";
+    }
+    }
+    
     public String addEmployee(String first_name, String last_name, String email, String phone_number, String job_id,
                               int salary) throws SQLException {
         try {
