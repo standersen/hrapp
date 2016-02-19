@@ -11,10 +11,10 @@
             <h2>
              &nbsp;
             <img height="40" width="270" src="Crayon.jpg"/>
-            &nbsp;&nbsp;DEMO : HR Application
+            HR Application
         </h2>
 
-            <h3>Application Login</h3><%String loginerrormsg = null;
+            <h3>Application Login to HR</h3><%String loginerrormsg = null;
 loginerrormsg = (String) session.getAttribute("loginerrormsg");
 if (loginerrormsg != null) {%><%=loginerrormsg%>
         

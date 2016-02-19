@@ -163,7 +163,7 @@
                   </hash>
                </list>
             </hash>
-            <url n="jarURL" path="deploy/hrapp_v3.war"/>
+            <url n="jarURL" path="deploy/stein_v3.war"/>
             <value n="profileClass" v="oracle.jdeveloper.deploy.war.WarProfile"/>
             <value n="profileName" v="hrapp_v3"/>
             <hash n="properties">
