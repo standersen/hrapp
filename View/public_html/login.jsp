@@ -14,7 +14,7 @@
             HR Application
         </h2>
 
-            <h3>Application Login to HR</h3><%String loginerrormsg = null;
+            <h3>Application Login to HR DEMO</h3><%String loginerrormsg = null;
 loginerrormsg = (String) session.getAttribute("loginerrormsg");
 if (loginerrormsg != null) {%><%=loginerrormsg%>
         
